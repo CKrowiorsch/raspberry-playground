@@ -1,0 +1,19 @@
+# interface setup
+sudo nano /ect/network/interfaces
+
+# content
+auto wlan0
+allow-hotplug wlan0
+iface wlan0 inet dhcp
+wpa-ap-scan 1
+wpa-scan-ssid 1
+wpa-ssid "DEIN-WLAN-NAME"
+wpa-psk "DEIN-WLAN-SCHLÜSSEL"
+
+# restart service
+sudo service networking restart
+
+
+# updating
+sudo apt-get update
+sudo apt-get upgrade
